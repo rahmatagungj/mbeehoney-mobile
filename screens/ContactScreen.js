@@ -25,79 +25,77 @@ const ContactScreen = () => {
   const LONGITUDE_DELTA = LATITUD_DELTA + width / height;
 
   return (
-    <>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
       <StatusBar backgroundColor="white" />
-      <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-        <View>
-          <MapViews
-            widths={width}
-            heights={height}
-            customMapStyle={mapStandardStyle}
-            showsUserLocation
-            loadingEnabled
-            initialRegion={{
-              latitude: -6.975200176239014,
-              longitude: 108.46880340576172,
-              latitudeDelta: LATITUD_DELTA,
-              longitudeDelta: LONGITUDE_DELTA,
-            }}
-          >
-            <Marker
-              coordinate={{ latitude: -6.9752, longitude: 108.468803 }}
-              title="Mbee Honey"
-              pinColor={"#f16601"}
-            />
-          </MapViews>
-          <Floating
-            heights={height}
-            widths={width}
-            style={{
-              shadowColor: "#3b3b3b",
-              shadowOffset: {
-                width: 0,
-                height: 2,
-              },
-              shadowOpacity: 0.15,
-              shadowRadius: 1,
-              elevation: 2,
-            }}
-          >
-            <Avatar source={require("../assets/product2.png")} />
-            <TitleContact>MBEE HONEY</TitleContact>
-            <Content>
-              <TouchableOpacity
-                onPress={() => Linking.openURL("https://mbeehoney.com")}
-              >
-                <WithFlex>
-                  <MaterialCommunityIcons name="web" size={20} color="black" />
-                  <WithMargin>
-                    <Text>mbeehoney.com</Text>
-                  </WithMargin>
-                </WithFlex>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() =>
-                  Linking.openURL(
-                    "https://api.whatsapp.com/send?phone=6282321580452&text=Hai%20Kak%20Hani,%20Saya%20tertarik%20untuk%20Order%20MBee%20Honey"
-                  )
-                }
-              >
-                <WithFlex>
-                  <MaterialCommunityIcons
-                    name="whatsapp"
-                    size={20}
-                    color="black"
-                  />
-                  <WithMargin>
-                    <Text>082321580452</Text>
-                  </WithMargin>
-                </WithFlex>
-              </TouchableOpacity>
-            </Content>
-          </Floating>
-        </View>
-      </SafeAreaView>
-    </>
+      <View>
+        <MapViews
+          widths={width}
+          heights={height}
+          customMapStyle={mapStandardStyle}
+          showsUserLocation
+          loadingEnabled
+          initialRegion={{
+            latitude: -6.975200176239014,
+            longitude: 108.46880340576172,
+            latitudeDelta: LATITUD_DELTA,
+            longitudeDelta: LONGITUDE_DELTA,
+          }}
+        >
+          <Marker
+            coordinate={{ latitude: -6.9752, longitude: 108.468803 }}
+            title="Mbee Honey"
+            pinColor={"#f16601"}
+          />
+        </MapViews>
+        <Floating
+          heights={height}
+          widths={width}
+          style={{
+            shadowColor: "#3b3b3b",
+            shadowOffset: {
+              width: 0,
+              height: 2,
+            },
+            shadowOpacity: 0.15,
+            shadowRadius: 1,
+            elevation: 2,
+          }}
+        >
+          <Avatar source={require("../assets/product2.png")} />
+          <TitleContact>MBEE HONEY</TitleContact>
+          <Content>
+            <TouchableOpacity
+              onPress={() => Linking.openURL("https://mbeehoney.com")}
+            >
+              <WithFlex>
+                <MaterialCommunityIcons name="web" size={20} color="black" />
+                <WithMargin>
+                  <Text>mbeehoney.com</Text>
+                </WithMargin>
+              </WithFlex>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL(
+                  "https://api.whatsapp.com/send?phone=6282321580452&text=Hai%20Kak%20Hani,%20Saya%20tertarik%20untuk%20Order%20MBee%20Honey"
+                )
+              }
+            >
+              <WithFlex>
+                <MaterialCommunityIcons
+                  name="whatsapp"
+                  size={20}
+                  color="black"
+                />
+                <WithMargin>
+                  <Text>082321580452</Text>
+                </WithMargin>
+              </WithFlex>
+            </TouchableOpacity>
+          </Content>
+        </Floating>
+      </View>
+    </SafeAreaView>
   );
 };
 

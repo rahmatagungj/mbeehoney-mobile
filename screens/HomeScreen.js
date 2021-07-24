@@ -94,8 +94,8 @@ const TitleHotProduct = styled.Text`
 
 const ContainerHotProduct = styled.View`
   flex-direction: row;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 const ImageHotProduct = styled.Image`
