@@ -3,6 +3,7 @@
     "name": "mbeehoney-mobile",
     "slug": "mbeehoney-mobile",
     "version": "1.0.0",
+    "sdkVersion": "41.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -23,6 +24,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMaps" : {
+          "apiKey": "AIzaSyBu2ZEjt13j13n3DrMTcmB2xpglYt_vuK4"
+        }
       }
     },
     "web": {
